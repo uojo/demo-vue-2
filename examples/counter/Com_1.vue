@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="cpbox">
 	{{ca1}}
 	</div>
 </template>
