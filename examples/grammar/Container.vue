@@ -12,11 +12,11 @@
 			</td>
 			<td width="30%">
 				<h5>Components</h5>
-				<Child1 />
+				<C1 />
 			</td>
 			<td>
 				<h5>Components</h5>
-				<Com_1 />
+				<C2 />
 			</td>
 		</tr>
 		</tbody>
@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import Child1 from './Child_1.vue'
-import Com_1 from './Com_1.vue'
+import C1 from './C1.vue'
+import C2 from './C2.vue'
 
 let localCount = 20;
 
@@ -37,8 +37,8 @@ export default {
 	},
 	props:["a1"],
 	components:{
-		Child1,
-		Com_1
+		C1,
+		C2
 	}
 }
 </script>

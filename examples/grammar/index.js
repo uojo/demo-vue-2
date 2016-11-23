@@ -1,7 +1,7 @@
 // import 'babel-polyfill' //会使打包之后的文件增大！
 import Vue from 'vue'
-import Counter from './Counter.vue'
-import COM_1 from './COM_1.vue'
+import Counter from './Container.vue'
+import COM_1 from './C1.vue'
 // import Counter2 from './Counter2.vue'
 
 
