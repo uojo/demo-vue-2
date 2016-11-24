@@ -11,7 +11,7 @@ td{ vertical-align: top;}
 .fr{ float:right; }
 
 .hide{ display:none; }
-.mt10 { margin-top:10px; }
+.mt10{ margin-top:10px; }
 .bg1 { background:#eee; }
 .red { color:red; }
 
@@ -21,4 +21,5 @@ td{ vertical-align: top;}
 
 .ttjson { width:95%; height:180px; vertical-align:top;}
 .tbarea {width:100%;}
-.tbarea td{ vertical-align:top;}
+.tbarea td{ vertical-align:top; }
+.tbarea td li{ font-size:12px;}

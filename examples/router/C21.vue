@@ -7,7 +7,7 @@
 <script>
 export default {
 	data:()=>{
-		return {a1:"组件-1"}
+		return {a1:"组件-21（命名视图）"}
 	}
 }
 </script>
