@@ -4,6 +4,11 @@ import Counter from './Container.vue'
 import COM_1 from './C1.vue'
 // import Counter2 from './Counter2.vue'
 
+import plugin1 from './plugin1'
+
+// 使用自定义插件
+console.warn( plugin1 );
+Vue.use(plugin1);
 
 // console.log( "Counter", Counter );
 
