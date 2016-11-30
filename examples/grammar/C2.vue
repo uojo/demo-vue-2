@@ -7,7 +7,7 @@
 <script>
 export default {
 	data:()=>{
-		return {ca1:"子组件：Child_1"}
+		return {ca1:"组件2"}
 	}
 }
 </script>

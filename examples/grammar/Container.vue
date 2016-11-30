@@ -12,7 +12,8 @@
 			</td>
 			<td width="30%">
 				<h5>Components</h5>
-				<C1 />
+				<C1 :td1="a5" />
+				<p>{{a5}}</p>
 			</td>
 			<td>
 				<h5>Components</h5>
@@ -33,7 +34,11 @@ let localCount = 20;
 export default {
 	data:()=>{
 		console.log("data",this); // undefined
-		return {a0:"Hello"}
+		return {
+			a0:"Hello",
+			a5:1,
+			a6:10
+		}
 	},
 	props:["a1"],
 	components:{
