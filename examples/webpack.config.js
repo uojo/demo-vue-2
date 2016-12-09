@@ -4,8 +4,6 @@ const webpack = require('webpack')
 
 module.exports = {
 
-  devtool: 'inline-source-map',
-
   entry: fs.readdirSync(__dirname).reduce((entries, dir) => {
     const fullDir = path.join(__dirname, dir)
     const entry = path.join(fullDir, 'index.js')
