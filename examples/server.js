@@ -13,8 +13,8 @@ app.use(webpackDevMiddleware(compiler, {
 		"colors": true,
 		"chunks": false,
 	},
-	"quiet":true,
-	"noInfo":true,
+	// "quiet":true,
+	// "noInfo":true,
 	"clientLogLevel":"none"
 }));
 

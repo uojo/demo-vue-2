@@ -5,7 +5,7 @@
 </template>
 
 <script>
-require("./a.css")
+// require("./a.css") // error
 
 export default {
 	data:()=>{
