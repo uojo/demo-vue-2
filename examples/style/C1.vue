@@ -9,8 +9,6 @@
 </template>
 
 <script>
-// require("./a.css")
-// import "./a.css"
 
 export default {
 	data:()=>{
