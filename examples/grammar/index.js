@@ -1,8 +1,8 @@
 // import 'babel-polyfill' //会使打包之后的文件增大！
 import Vue from 'vue'
-import Counter from './Container.vue'
+import Container from './Container.vue'
 import COM_1 from './C1.vue'
-// import Counter2 from './Counter2.vue'
+// import Container2 from './Container2.vue'
 
 import plugin1 from './plugin1'
 
@@ -10,9 +10,9 @@ import plugin1 from './plugin1'
 console.warn( plugin1 );
 Vue.use(plugin1);
 
-// console.log( "Counter", Counter );
+// console.log( "Container", Container );
 
-// Vue.component('Counter', Counter);
+// Vue.component('Container', Container);
 
 // 创建根组件
 var demo = new Vue({
@@ -20,14 +20,14 @@ var demo = new Vue({
 	data:{
 		pa1:1,
 	},
-	// render:h=> h( Counter ),
+	// render:h=> h( Container ),
 	/* render:h=> {
 		console.log("index.this",this);
-		return h( Counter );
+		return h( Container );
 	}, */
 	render(h){
 		console.log("index.this",this);
-		return h( Counter, { attrs:{ a1:1 } }, [COM_1] );
+		return h( Container, { attrs:{ a1:1 } }, [COM_1] );
 	},
 	components:{
 		COM_1
@@ -39,7 +39,7 @@ var demo = new Vue({
 // 注意：
 /*
  counter.vue 相当与
- const Counter = {
+ const Container = {
   template: `<div>{{ count }}</div>`,
   computed: {
     count () {

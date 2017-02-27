@@ -28,7 +28,9 @@
 			</td>
 			<td>
 				<h5>Components</h5>
-				<C2 />
+				<C2>
+					<button>btn2</button>
+				</C2>
 			</td>
 		</tr>
 		</tbody>

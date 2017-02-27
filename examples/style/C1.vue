@@ -1,3 +1,7 @@
+<style>
+@import "./a.css"
+</style>
+
 <template>
 <div class="box_b">
 
@@ -5,7 +9,8 @@
 </template>
 
 <script>
-require("./a.css")
+// require("./a.css")
+// import "./a.css"
 
 export default {
 	data:()=>{

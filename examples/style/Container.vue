@@ -1,9 +1,11 @@
 <style>
-.box_a{ background:#eee; }
+.box_a{ background:#eee; padding:10px; }
+@import "./a.css"
 </style>
 
 <template>
 <div class="box_a">
+	{{a0}}
 	<C1 />
 </div>
 </template>
@@ -27,7 +29,6 @@ export default {
 			}
 		}
 	},
-	props:["a1"],
 	methods:{
 		fn1(){
 			++this.a7.a;

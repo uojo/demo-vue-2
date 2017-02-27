@@ -1,6 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+// const extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
 
 module.exports = {
 
@@ -26,10 +29,20 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.vue$/, loader: 'vue' }
+      { test: /\.vue$/, loader: 'vue' },
+      // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader?sourceMap!autoprefixer-loader') },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract({
+		fallback: "style-loader",
+		use: "css-loader"
+	   }) },
     ]
   },
 
+  vue: {
+	  loaders: {
+		  // css:'vue-style-loader!css-loader'
+	  }
+  },
   /* resolve: {
     alias: {
       vuex: path.resolve(__dirname, '../build/dev-entry')
@@ -37,6 +50,7 @@ module.exports = {
   }, */
 
   plugins: [
+	new ExtractTextPlugin("abc.css"),
     new webpack.optimize.CommonsChunkPlugin('shared.js'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
