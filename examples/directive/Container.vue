@@ -24,7 +24,7 @@ import directives from './directive1'
 console.warn( directives )
 
 export default {
-	directives:directives,
+	directives,
 	data:()=>{
 		console.log("data",this); // undefined
 		return {

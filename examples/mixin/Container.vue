@@ -4,13 +4,16 @@
 		<tbody>
 		<tr>
 			<td width="30%">
-				<button>my1</button>
+				<p>methods 优先级
+					<button @click="fn1">fn1</button>
+					<button @click="fn2">fn2</button>
+				</p>
 			</td>
 			<td width="30%">
-
+				
 			</td>
 			<td>
-
+				
 			</td>
 		</tr>
 		</tbody>
@@ -19,9 +22,15 @@
 </template>
 
 <script>
-// import C1 from './C1.vue'
-import mixins{my1} from './mixin1'
-console.warn( mixins )
+import C1 from './C1.vue'
+import utils from '../utils'
+import mixins from './mixin1'
+
+const {msg} = utils
+const { my1 } = mixins
+
+msg( "utils", utils )
+msg( "mixins", my1 )
 
 export default {
 	mixins:[my1],
@@ -38,16 +47,37 @@ export default {
 		}
 	},
 	methods:{
-		fn1(){
-			
+		/* fn1(){
+			msg("vue.fn1")
+		}, */
+		fn2(){
+			msg("vue.fn2")
 		}
 	},
 	components:{
 		// C1,
 		// C2
 	},
-	created:()=>{
-		
+	beforeCreate(){
+		msg("lifecycle.beforeCreate",this);
+	},
+	created(){
+		msg("lifecycle.created",this);
+	},
+	beforeMount(){
+		msg("lifecycle.beforeMount",this);
+	},
+	mounted(){
+		msg("lifecycle.mounted",this);
+	},
+	beforeUpdate(){
+		msg("lifecycle.beforeUpdate",this);
+	},
+	updated(){
+		msg("lifecycle.updated",this);
+	},
+	beforeDestroy(){
+		msg("lifecycle.beforeDestroy",this);
 	}
 }
 </script>

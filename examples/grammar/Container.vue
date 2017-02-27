@@ -12,7 +12,7 @@
 			</td>
 			<td width="30%">
 				<h5>Components</h5>
-				<C1 :pd1="a5" :pd2="a7" />
+				<C1 :pd1="a5" :pd2="a7" :pd3="a9" />
 				<h5>继承给子组件的变量：</h5>
 				<p>对象：a: {{a7.a}}，b: {{a7.b}}，非：{{a5}}</p>
 				<p>变更继承量 <button @click="fn1"> plus.parent </button> </p>
@@ -54,9 +54,11 @@ export default {
 			a7:{
 				a:10,
 				b:2
-			}
+			},
+			a9:"world"
 		}
 	},
+	
 	props:["a1"],
 	methods:{
 		fn1(){

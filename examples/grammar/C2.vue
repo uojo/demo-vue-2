@@ -10,7 +10,7 @@
   <p>content</p>
   <p slot="footer">footer</p>
 </C2_1>
-<C2_1 />
+<C2_1 :pd1="a1" />
 </div>
 </template>
 
@@ -21,7 +21,9 @@ export default {
 	data:()=>{
 		return {
 			ca1:"组件2",
-			slotHeight:0
+			slotHeight:0,
+			a1:1,
+			a2:"文本内容"
 		}
 	},
 	computed:{

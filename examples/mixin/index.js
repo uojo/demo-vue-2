@@ -1,9 +1,6 @@
 // import 'babel-polyfill' //会使打包之后的文件增大！
 import Vue from 'vue'
 import Container from './Container.vue'
-// import COM_1 from './C1.vue'
-// import Counter2 from './Counter2.vue'
-
 
 // console.log( "Container", Container );
 
