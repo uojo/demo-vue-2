@@ -32,9 +32,9 @@ module.exports = {
       { test: /\.vue$/, loader: 'vue' },
       // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader?sourceMap!autoprefixer-loader') },
       { test: /\.css$/, loader: ExtractTextPlugin.extract({
-		fallback: "style-loader",
-		use: "css-loader"
-	   }) },
+    		fallback: "style-loader",
+    		use: "css-loader"
+	   })},
     ]
   },
 
@@ -50,11 +50,12 @@ module.exports = {
   }, */
 
   plugins: [
-	new ExtractTextPlugin("abc.css"),
-    new webpack.optimize.CommonsChunkPlugin('shared.js'),
-    new webpack.DefinePlugin({
+      new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
+	new ExtractTextPlugin("abc.css"),
+    new webpack.optimize.CommonsChunkPlugin('shared.js'),
+
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
