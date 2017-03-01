@@ -4,13 +4,18 @@
 		<tbody>
 		<tr>
 			<td width="30%">
-				<p>methods 优先级
+				methods 优先级
+				<p>
 					<button @click="fn1">fn1</button>
 					<button @click="fn2">fn2</button>
 				</p>
 			</td>
 			<td width="30%">
-				
+				优先级
+				<ol>
+					<li> this.methods > mixin.methods</li>
+					<li> this.lifeCycle < mixin.lifeCycle</li>
+				</ol>
 			</td>
 			<td>
 				
