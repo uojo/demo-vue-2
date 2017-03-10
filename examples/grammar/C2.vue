@@ -2,7 +2,7 @@
 <div class="cpbox">
 {{ca1}} 
 <span class="j_slot_a">
-<slot > slot初始内容：<button>btn0</button></slot>
+	<slot> slot初始内容：<button>btn0</button></slot>
 </span>
 <b>slotDomHeight:{{slotHeight}}</b>
 <C2_1>
