@@ -8,7 +8,7 @@
 export default {
 	data:()=>{
 		return {
-			a1:"组件-C21（命名视图）"
+			a1:"组件-c22（命名视图）"
 		
 		}
 	}

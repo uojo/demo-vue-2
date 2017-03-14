@@ -6,6 +6,7 @@ import Container from './Container.vue'
 // import C0 from './C0.vue'
 import C2 from './C2.vue'
 import C21 from './C21.vue'
+import C22 from './C22.vue'
 import C3 from './C3.vue'
 import C31 from './C31.vue'
 
@@ -16,15 +17,28 @@ const routes = [
 		path: '/c2',
 		// component: C2,
 		// 重定向
-		redirect: "/c2/c21", 
+		// redirect: "/c2/c21", 
+		components: {
+			default:C2,
+			a: C21,
+			b: C22
+		},
+		/* 
 		children:[
 			{
 				path:"c21",
 				components: {
-					"c21": C21
+					"c21": C21,
+					"c22": C22
 				},
-			}
-		]
+			},
+			{
+				path:"c22",
+				components: {
+					
+				},
+			} 
+		]*/
 	},
 	{
 		path: '/c3',
